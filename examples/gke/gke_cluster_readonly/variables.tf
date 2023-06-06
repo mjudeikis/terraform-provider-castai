@@ -27,5 +27,6 @@ variable "castai_api_token" {
 
 variable "castai_api_url" {
   type = string
-  description = "CAST AI api url"
+  description = "URL of alternative CAST AI API to be used during development or testing"
+  default     = "https://api.cast.ai"
 }

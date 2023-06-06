@@ -38,6 +38,11 @@ resource "helm_release" "castai_agent" {
     value = castai_gke_cluster.this.cluster_token
   }
 
+  set {
+    name  = "apiURL"
+    value = var.castai_api_url
+  }
+
   # Required until https://github.com/castai/helm-charts/issues/135 is fixed.
   set {
     name  = "createNamespace"
